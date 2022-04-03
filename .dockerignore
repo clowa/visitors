@@ -1,0 +1,7 @@
+# Github files
+.gitignore
+LICENSE
+*.md
+
+# Kubernetes files
+**/kubernetes/*
