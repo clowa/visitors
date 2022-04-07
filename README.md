@@ -25,3 +25,12 @@ To run the application locally you can simply do this via docker.
 1. Clone this repository by running 'git clone ...'
 2. Start the docker containers by running `docker-compose up --build`
 3. Visit http://localhost
+
+# Configuration
+
+The following environment variables can be used to configure the application:
+| Variable | Description | Example |
+|-----------------------|--------------------------------------|--------------|
+| `VISITORS_PORT` | Listening port of web app | `8080` |
+| `VISITORS_REDIS_HOST` | IP or DNS of redis backend with port | `redis:6379` |
+| `VISITORS_REDIS_DB` | Redis database ID to use | `0` |

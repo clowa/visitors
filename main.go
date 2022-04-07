@@ -24,7 +24,7 @@ type AppConfig struct {
 
 // loadConfig loads the app configuration from environment variables into a struct
 func (c *AppConfig) loadConfig() {
-	if err := envconfig.Process("VISITS", c); err != nil {
+	if err := envconfig.Process("VISITORS", c); err != nil {
 		log.Fatalf("failed to load config. Got error: %s", err)
 		os.Exit(1)
 	}

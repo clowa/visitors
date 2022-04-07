@@ -1,4 +1,4 @@
-module visits
+module visitors
 
 go 1.18
 

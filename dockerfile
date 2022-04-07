@@ -25,11 +25,11 @@ COPY ["*.go", "./"]
 
 # ldflags -w disables debug, letting the file be smaller.
 # netgo makes sure we use built-in net package and not the system’s one.
-RUN go build -tags netgo -ldflags '-w' -o /visits
+RUN go build -tags netgo -ldflags '-w' -o /visitors
 
 # Final harded image from scratch
 FROM scratch
-COPY --from=build /visits /visits
+COPY --from=build /visitors /visitors
 
 EXPOSE 8080
-CMD [ "/visits" ]
+CMD [ "/visitors" ]
