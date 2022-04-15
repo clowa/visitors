@@ -6,17 +6,13 @@ Basic golang application displaying the total number of visitors of the website.
 
 Supported platforms:
 
-- `linux/riscv64`
-- `linux/ppc64le`
-- `linux/s390x`
 - `linux/386`
-- `linux/mips64le`
-- `linux/mips64`
+- `linux/s390x`
 - `linux/amd64`
-- `linux/amd64/v2`
-- `linux/arm/v7`
 - `linux/arm/v6`
+- `linux/arm/v7`
 - `linux/arm64`
+- `linux/mips64le`
 
 # Getting started
 
