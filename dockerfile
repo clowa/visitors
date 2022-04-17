@@ -28,6 +28,7 @@ COPY ["*.go", "./"]
 RUN go build -tags netgo -ldflags '-w' -o /visitors
 
 # Final harded image from scratch
+#FROM gcr.io/distroless/static AS final # Build from google distroless projekt image
 FROM scratch
 COPY --from=build /visitors /visitors
 
