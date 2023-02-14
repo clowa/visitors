@@ -25,7 +25,7 @@ COPY ["src/*.go", "./"]
 
 # ldflags -w disables debug, letting the file be smaller.
 # netgo makes sure we use built-in net package and not the system’s one.
-RUN go build -tags netgo -ldflags '-w' -o /visitors
+RUN go build -a -tags netgo -ldflags '-w -extldflags "-static"' -o /visitors
 
 # Final harded image from scratch
 #FROM gcr.io/distroless/static AS final # Build from google distroless projekt image
