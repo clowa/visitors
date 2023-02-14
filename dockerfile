@@ -2,8 +2,8 @@
 # a statically cross platform compiled binary shipped in a harded
 # docker image from scratch
 
-ARG GO_VERSION="1.18"
-ARG ALPINE_VERSION="3.15"
+ARG GO_VERSION="1.20"
+ARG ALPINE_VERSION="3.17"
 ARG APP_VERSION
 
 ARG TARGETOS
@@ -21,7 +21,7 @@ WORKDIR /build
 COPY ["go.mod", "go.sum", "./"]
 RUN go mod download
 
-COPY ["*.go", "./"]
+COPY ["src/*.go", "./"]
 
 # ldflags -w disables debug, letting the file be smaller.
 # netgo makes sure we use built-in net package and not the system’s one.
