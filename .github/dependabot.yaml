@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: "gomod"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "friday"
+      time: "18:00"
+      timezone: "Europe/Berlin"
+    open-pull-requests-limit: 3
+    allow:
+      - dependency-type: "all"
+    labels:
+      - "gomod dependencies"
