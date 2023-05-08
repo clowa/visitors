@@ -1,5 +1,16 @@
 version: 2
 updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly" # on the first of every month
+      time: "18:00"
+      timezone: "Europe/Berlin"
+    assignees:
+      - clowa
+
+  #########################################
+  # Application
   - package-ecosystem: "gomod"
     directory: "/"
     schedule:
@@ -7,8 +18,7 @@ updates:
       day: "friday"
       time: "18:00"
       timezone: "Europe/Berlin"
-    open-pull-requests-limit: 3
+    assignees:
+      - clowa
     allow:
       - dependency-type: "all"
-    labels:
-      - "gomod dependencies"
