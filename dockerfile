@@ -28,7 +28,8 @@ RUN CGO_ENABLED=0 \
     go build -a -tags netgo -ldflags '-w -extldflags "-static"' -o /visitors
 
 # Final harded image from scratch
-#FROM gcr.io/distroless/static AS final # Build from google distroless projekt image
+# Build from google distroless projekt image
+# FROM gcr.io/distroless/static AS final 
 FROM scratch
 COPY --from=build /visitors /visitors
 
