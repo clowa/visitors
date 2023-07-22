@@ -1,4 +1,4 @@
-![Build docker images](https://github.com/clowa/visitors/actions/workflows/docker-buildx.yml/badge.svg)
+[![Build docker images](https://github.com/clowa/visitors/actions/workflows/docker-test.yml/badge.svg)](https://github.com/clowa/visitors/actions/workflows/docker-test.yml)
 
 # Overview
 
